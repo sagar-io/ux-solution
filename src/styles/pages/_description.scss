@@ -66,3 +66,72 @@
 .text-wrapper {
   @include flex();
 }
+
+
+@media (max-width: 500px) {
+.properties {
+  @include flex(column, 2rem);
+  height: unset;
+  padding: 1rem;
+
+  .price {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(58, 57, 57);
+  }
+  .rating {
+    position: absolute;
+    right: 0;
+    margin-right: -3rem;
+    top: 15%;
+    transform: rotate(-90deg) scale(1.4);
+  }
+  
+  .img {
+    padding: 1rem;
+  }
+  img {
+    width: 450px;
+    transform: scale(2);
+  }
+  p {
+    max-width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    border: 1px solid rgba(128, 128, 128, 0.475);
+    border-radius: 8px;
+    padding: 1rem;
+    color: black;
+    background-color: $light-clr-1;
+  }
+  h2 {
+    font-size: 2.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 550px;
+  }
+  button {
+    padding: 0.5rem 1.1rem;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    display: block;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid currentColor;
+    color: royalblue;
+    width: 100%;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: royalblue;
+      color: white;
+    }
+  }
+}
+
+.text-wrapper {
+  @include flex();
+}
+
+}
