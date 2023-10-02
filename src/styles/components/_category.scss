@@ -1,0 +1,43 @@
+@use "../abstract/mixins" as *;
+
+.category-bar {
+  @include flex(row);
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  overflow: hidden;
+
+  div {
+    cursor: pointer;
+    color: royalblue;
+    transition: 0.35s;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    &:hover > p {
+      animation: hoverTextAnimation 0.75s ease-in;
+    }
+  }
+  @keyframes hoverTextAnimation {
+    40% {
+      transform: translateY(150%);
+    }
+    41% {
+      transform: translateY(-150%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .category-bar {
+    align-items: start;
+    margin: 1.5rem 0;
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}

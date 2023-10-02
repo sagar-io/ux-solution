@@ -1,0 +1,19 @@
+@use '../abstract/mixins' as *;
+
+.quantity {
+    width: min-content;
+    padding: 0 8px;
+    @include flex(row);
+    justify-content: space-evenly;
+    cursor: pointer;
+    border: 0.4px solid gray;
+    border-radius: 1rem;
+    transition: 0.4s;
+
+    div {
+    }
+
+    &:hover {
+        background-color: teal;
+    }
+}

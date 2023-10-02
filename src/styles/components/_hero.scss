@@ -1,0 +1,24 @@
+@use '../abstract' as *;
+
+.hero-wrapper {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+
+}
+#hero-video {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    top: -10%;
+}
+
+.hero-txt {
+    color: $green-clr;
+    position: absolute;
+    font-size: 5rem;
+    z-index: 11;
+    max-width: 900px;
+    padding-left: 2rem;
+
+}

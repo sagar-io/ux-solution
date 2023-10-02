@@ -1,0 +1,178 @@
+@use "../abstract/" as *;
+
+.cart-wrapper {
+  a {
+    text-decoration: none;
+  }
+  margin-bottom: 3rem;
+  .heading {
+    text-align: center;
+    color: $green-clr;
+  }
+  img {
+    width: 100px;
+  }
+}
+
+.cart-table {
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.338);
+  img {
+    width: 100%;
+    width: 60px;
+  }
+  .img-title {
+    @include flex(row);
+    justify-content: left;
+    cursor: pointer;
+    gap: 2rem;
+
+    p {
+      max-width: 300px;
+    }
+  }
+
+  td {
+    padding: 1rem 0;
+  }
+}
+
+thead {
+  .t-heading {
+    color: gray;
+    font-size: 1.4rem;
+  }
+  td {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.338);
+  }
+}
+
+.cart-total {
+  @include flex(column, 2rem);
+  align-items: flex-end;
+  text-align: right;
+  padding: 3rem 4rem 0 0;
+  font-weight: 700;
+  color: $green-clr;
+  font-size: 1.6rem;
+  word-spacing: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  button {
+    padding: 0.65rem 7rem;
+    border: none;
+    font-size: 1.2rem;
+    background-color: royalblue;
+    display: block;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid royalblue;
+    box-shadow: 0 0 8px -4px black;
+    transition: 0.25s;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid royalblue;
+      color: royalblue;
+    }
+  }
+}
+
+Link {
+  text-decoration: none;
+}
+
+.logo {
+  @include flex(row);
+
+  h1 {
+    font-size: 2rem;
+  }
+  img {
+    width: 60px;
+  }
+}
+
+.cart-nav-link {
+  .link {
+    text-decoration: none;
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: royalblue;
+    transition: 0.4s;
+    text-shadow: 2px 1px 6px rgba(128, 128, 128, 0.521);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+td {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    @include flex(row);
+    h1 {
+      font-size: 1rem;
+    }
+    img {
+      width: 30px;
+    }
+  }
+  .cart-nav-link {
+    .link {
+      margin-right: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cart-table {
+    font-size: 0.8rem;
+    width: 95%;
+    border-bottom: 0.4px solid rgba(128, 128, 128, 0.338);
+    img {
+      width: 50px;
+    }
+    .img-title {
+      gap: 0.5rem;
+
+      p {
+        font-size: 0.8rem;
+        padding-right: 1rem;
+      }
+    }
+    td{
+      padding: 1.1rem 0;
+    }
+  }
+  thead {
+    td {
+      border-bottom: 0.5px solid rgba(128, 128, 128, 0.338);
+    }
+    .logo {
+      @include flex(row);
+      h1 {
+        font-size: 1rem;
+      }
+      img {
+        width: 30px;
+      }
+    }
+    .cart-nav-link {
+      .link {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

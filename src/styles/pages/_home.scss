@@ -1,0 +1,14 @@
+@use '../abstract/' as *;
+
+
+.home-wrapper {
+    width: 100%;
+    margin: auto;
+    background-color: $light-clr-1;
+}
+
+.all-products {
+    @include flex(row);
+    flex-wrap: wrap;
+    gap: 2rem;
+}

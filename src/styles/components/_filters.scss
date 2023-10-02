@@ -1,0 +1,29 @@
+@use "../abstract/mixins" as *;
+
+.filters {
+  @include flex(row);
+  padding: 0.5rem 0;
+  margin-bottom: 4rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.58);
+  justify-content: space-evenly;
+
+  .icon img {
+    width: 2.5rem;
+    opacity: 0.5;
+  }
+}
+.txt-icon {
+  @include flex(row);
+}
+
+@media (max-width: 500px) {
+  .filters {
+    @include flex(column);
+    padding: 0.4rem 0;
+    margin-bottom: 0.5rem;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.58);
+    .icon img {
+      width: 2rem;
+    }
+  }
+}

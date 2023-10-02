@@ -1,0 +1,63 @@
+@use "../abstract/mixins" as *;
+
+.card {
+  cursor: pointer;
+  @include flex();
+  @include shadow();
+  justify-content: space-between;
+  width: 300px;
+  height: 450px;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+
+  h3 {
+    max-width: 250px;
+    text-align: center;
+  }
+
+  img {
+    height: 300px;
+    width: 100%;
+  }
+  &:hover {
+    transform: scale(1.1)
+  }
+}
+
+.card-data {
+  @include flex();
+}
+
+.hover-btns {
+  content: "";
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transition: 0.3s;
+  @include flex();
+  opacity: 0;
+
+  .more-btn {
+    width: 40%;
+  }
+  .cart-btn {
+    width: 60%;
+  }
+}
+
+.stats {
+  @include flex(row);
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+
+  .price {
+    font-weight: bold;
+  }
+}

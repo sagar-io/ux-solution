@@ -1,0 +1,19 @@
+// Base Styles
+@import './base/root';
+@import './base/typography';
+// Components Styles
+@import './components/productCard';
+@import './components/button';
+@import './components/category';
+@import './components/tagline';
+@import './components/filters';
+@import './components/slider';
+@import './components/navbar';
+@import './components/cart';
+@import './components/hero';
+@import './components/quantity';
+@import './components/history';
+@import './components/signin';
+// Pages Styles
+@import './pages/home';
+@import './pages/description';
