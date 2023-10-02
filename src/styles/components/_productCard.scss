@@ -61,3 +61,28 @@
     font-weight: bold;
   }
 }
+
+@media (max-width:600px) {
+  
+.card {
+  width: 600px;
+  height: auto;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+
+  h3 {
+    max-width: 250px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+  &:hover {
+    transform: scale(1.1)
+  }
+}
+}

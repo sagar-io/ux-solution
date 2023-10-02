@@ -119,3 +119,27 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 600px) {
+.nav-wrapper nav {
+  height: 6vh;
+}
+.user-details {
+  img {
+    width: 55px;
+    width: 55px;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  img:hover {
+    transform: scale(1.06);
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.link {
+  color: $light-clr-1 !important;
+}
+}

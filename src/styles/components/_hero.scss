@@ -22,3 +22,28 @@
     padding-left: 2rem;
 
 }
+
+@media (max-width: 600px) {
+    .hero-wrapper {
+        position: relative;
+        height: 90vh;
+        overflow: hidden;
+    
+    }
+    #hero-video {
+        position: absolute;
+        right: 0;
+        z-index: 10;
+        top: -10%;
+    }
+    
+    .hero-txt {
+        color: $green-clr;
+        position: absolute;
+        padding-top: 4rem;
+        font-size: 2.2rem;
+        z-index: 11;
+        max-width: 350px;
+        padding-left: 1rem;
+    }
+}
